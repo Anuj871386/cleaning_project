@@ -1,0 +1,240 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="hero">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content">
+        <h1>
+            Professional Cleaning <br>
+            Services for Homes & Offices
+        </h1>
+
+        <p>
+            We provide reliable, affordable, and high-quality cleaning solutions
+            for every corner of your space. From deep carpet cleaning to
+            complete house cleaning and pest control, our trained professionals
+            ensure a healthier and fresher environment for you.
+        </p>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-image">
+        <img src="{% static 'core/images/cleaning1.png' %}" alt="Cleaning">
+    </div>
+
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+
+    <!-- CARD 1 -->
+    <div class="feature-card">
+        <img src="{% static 'core/images/service1.png' %}" 
+             alt="Price" 
+             class="pricing-icon">
+
+        <h3>Excellent Service & <br> On-Time Work</h3>
+
+        <div class="feature-hover">
+            <p>
+                We ensure timely delivery with high-quality cleaning 
+                standards and 100% customer satisfaction.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="feature-card">
+            <img src="{% static 'core/images/staff1.png' %}" 
+             alt="Price" 
+             class="pricing-icon">
+
+        <h3>Very Professional & <br> Polite Staff</h3>
+
+        <div class="feature-hover">
+            <p>
+                Our trained and verified staff maintain professionalism 
+                and respect in every service.
+            </p>
+        </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="feature-card">
+        <img src="{% static 'core/images/price2.png' %}" 
+     alt="Price" 
+     class="pricing-icon">
+
+        <h3>Worth the Price</h3>
+
+        <div class="feature-hover">
+            <p>
+                Affordable packages with premium cleaning experience 
+                tailored to your needs.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+{% include 'core/about_section.html' %}
+{% include 'core/services_section.html' %}
+
+
+<section class="why-section">
+
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/staff.png' %}" alt="">
+            </div>
+            <h3>Trained & Verified Staff</h3>
+        </div>
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/eco1.png' %}" alt="">
+            </div>
+            <h3>Safe & Eco-Friendly Cleaning Products</h3>
+        </div>
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/equipment.png' %}" alt="">
+            </div>
+            <h3>Advanced Cleaning Equipment</h3>
+        </div>
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/hand.png' %}" alt="">
+            </div>
+            <h3>Affordable and Transport Pricing</h3>
+        </div>
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/watch.png' %}" alt="">
+            </div>
+            <h3>On-Time Service</h3>
+        </div>
+
+        <div class="why-card">
+            <div class="icon-box">
+                <img src="{% static 'core/images/thumb.png' %}" alt="">
+            </div>
+            <h3>Customer Satisfaction Guaranted</h3>
+        </div>
+
+    </div>
+
+</section>
+<!-- WHY CHOOSE US SECTION END -->
+
+
+
+
+{% include 'core/testimonial.html' %}
+
+
+<section id="testimonial" class="testimonial-section">
+
+    <h2 class="testimonial-top-text">
+        Trusted by homeowners and businesses for reliable, high-quality cleaning and pest control services.
+        <br>
+        We deliver spotless results with complete customer satisfaction.
+    </h2>
+
+    <div class="testimonial-grid">
+
+        <!-- CARD 1 -->
+        <div class="testimonial-box">
+            <div class="stars">
+                ★★★★★ <span>Rating (5.0)</span>
+            </div>
+
+            <p>
+                Excellent service! My sofa and carpets look brand new again.
+                The team was punctual, polite, and very professional.
+            </p>
+
+            <div class="profile">
+                <img src="{% static 'core/images/manwatching.png' %}">
+                <h4>Narayana</h4>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="testimonial-box">
+            <div class="stars">
+                ★★★★★ <span>Rating (5.0)</span>
+            </div>
+
+            <p>
+                They did a deep cleaning of my kitchen and bathrooms,
+                and the results were outstanding. Highly recommended.
+            </p>
+
+            <div class="profile">
+                <img src="{% static 'core/images/ladki.png' %}">
+                <h4>Navya</h4>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="testimonial-box">
+            <div class="stars">
+                ★★★★★ <span>Rating (5.0)</span>
+            </div>
+
+            <p>
+                Affordable pricing with top-quality service.
+                Their pest control service was extremely effective.
+            </p>
+
+            <div class="profile">
+                <img src="{% static 'core/images/3log.png' %}">
+                <h4>Rahul</h4>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="testimonial-box">
+            <div class="stars">
+                ★★★★★ <span>Rating (5.0)</span>
+            </div>
+
+            <p>
+                Very impressed with their water tank cleaning service.
+                The staff was friendly and well-trained.
+            </p>
+
+            <div class="profile">
+                <img src="{% static 'core/images/agewoman.png' %}">
+                <h4>Sneha</h4>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% include 'core/contact_us.html' %}
+
+{% endblock %}
+
+
+

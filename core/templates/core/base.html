@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cleaning Solutions</title>
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <!-- LEFT LOGO SECTION -->
+    <div class="logo-section">
+        <img src="{% static 'core/images/rs-logo.png' %}" class="logo-img" alt="RS Logo">
+
+        <div class="logo-text">
+            <span class="black">Cleaning</span>
+            <span class="orange">Solutions</span>
+        </div>
+    </div>
+
+    <!-- RIGHT NAVIGATION -->
+    <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonial">Testimonial</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+</nav>
+
+{% block content %}{% endblock %}
+
+</body>
+</html>
+
+
