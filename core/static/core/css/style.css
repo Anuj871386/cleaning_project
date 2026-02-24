@@ -6,49 +6,60 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-     overflow-x: hidden;
+    overflow-x: hidden;
+    padding-top: 90px;
 }
 
-.logo-img {
-    height: 120px !important;  
-}
+
 
 /* ================= NAVBAR ================= */
 
-/* NAVBAR */
+/* ================= NAVBAR FIXED ================= */
+
 .navbar {
-    position: relative;   /* change from absolute */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 15px 20px;
+    background: #ffffff;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+    padding: 15px 60px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
+/* Logo */
 .logo-img {
-    height: 50px;
+    height: 60px;
 }
 
+/* Nav Links */
 .nav-links {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     list-style: none;
-    padding: 0;
     margin: 0;
-    flex-wrap: wrap;
+    padding: 0;
 }
 
 .nav-links li a {
     text-decoration: none;
-    padding: 8px 14px;
-    background: #f1f1f1;
+    padding: 8px 18px;
+    background: #f2f2f2;
     border-radius: 25px;
     color: #333;
     font-size: 14px;
-    white-space: nowrap;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: orange;
+    color: #fff;
 }
 
 
@@ -56,12 +67,10 @@ body {
 /* ================= HERO SECTION ================= */
 
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 120px;
-    position: relative;
-
+    padding: 120px 5% 60px 5%;
     background:
         linear-gradient(
             to right,
@@ -74,14 +83,13 @@ body {
     background-size: cover;
     background-position: right center;
     background-repeat: no-repeat;
-    padding: 100px 100px 0 100px;
 }
 
 /* ================= HERO TEXT ================= */
 
 .hero-content {
     max-width: 800px;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 
 .hero-content h1 {
@@ -110,11 +118,14 @@ body {
     }
 }
 
-.nav-links li a {
-    padding: 6px 10px;
-    font-size: 11px;
-    border-radius: 18px;
+@media (max-width: 768px) {
+    .nav-links li a {
+        padding: 6px 10px;
+        font-size: 11px;
+        border-radius: 18px;
+    }
 }
+
 
 
 
@@ -233,7 +244,7 @@ body {
 .img2 {
     position: absolute;
     top: 110px;
-    right: -50px;
+    right: -30px;
     width: 170px !important;
     height: 170px !important;
     border-radius: 50% !important;
@@ -251,9 +262,9 @@ body {
 }
 
 /* RIGHT SIDE CONTENT */
+
 .about-content {
-    width: 70%;
-    
+    flex: 1;
 }
 
 
@@ -284,7 +295,6 @@ body {
     font-weight: 400;
     color: #111;
     margin-top: 40px;
-    margin-right: -120px;   /* Stretch like screenshot */
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -354,84 +364,9 @@ body {
 /* --- GRID CONTAINER --- */
 .services-grid {
     display: grid;
-    /* 12 Columns ka use kiya hai perfect alignment ke liye */
-    grid-template-columns: repeat(12, 1fr); 
-    /* Row heights exact image layout ke hisaab se */
-    grid-template-rows: 240px 60px 200px 220px; 
-    gap: 15px;
-    background: transparent;
-    align-items: stretch;
-    margin-top: -40px;
-}
-
-.service-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    background: #f4f4f4; /* Subtle background agar image load na ho */
-}
-
-.service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* --- HOVER DESCRIPTION OVERLAY --- */
-.service-card .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-.service-card:hover .overlay {
-    transform: translateY(0);
-}
-
-/* --- GRID CONTAINER --- */
-.services-grid {
-    display: grid;
-    /* 12 columns for perfect symmetry between left and right */
-    grid-template-columns: repeat(12, 1fr); 
-    /* Defined row heights to ensure top corners are equal */
-    grid-template-rows: 150px 80px 100px 220px; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 240px 60px 180px 240px;
     gap: 20px;
-    background: transparent;
-    align-items: stretch;
-}
-
-.service-card {
-    position: relative;
-    border-radius: 18px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-}
-
-.service-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* --- GRID CONTAINER --- */
-.services-grid {
-    display: grid;
-    /* 12 columns for precise horizontal control */
-    grid-template-columns: repeat(12, 1fr); 
-    /* Precise row heights to match the asymmetry of the Figma file */
-    grid-template-rows: 240px 60px 180px 240px; 
-    gap: 20px;
-    background: transparent;
-    align-items: stretch;
 }
 
 .service-card {
@@ -448,6 +383,8 @@ body {
     object-fit: cover;
     display: block;
 }
+
+
 
 .service-title {
     position: absolute;
@@ -558,27 +495,13 @@ body {
 
 /* SECTION TITLE */
 .section-title {
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    margin-top: -120px;
-    bottom: 90px;
-    
-}
-
-.section-title {
     text-align: center;
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 60px;
     color: #000;
-    margin-top: -190px;
-    
 }
 
-/* Orange Full Underline */
 .section-title::after {
     content: "";
     display: block;
@@ -632,13 +555,6 @@ body {
 
 /* TESTNOMIAL */
 
-.testimonial-section {
-    background: #f7f7f7;
-    padding: 100px 0 140px 0;
-    margin-top: -120px;
-    text-align: center;
-}
-
 
 
 .gallery-grid {
@@ -685,9 +601,7 @@ body {
 
 
 
-.section-title {
-    margin-top: -200px;   /* value kam-jyada karke adjust kar sakte ho */
-}
+
 
 
 /* Rating */
@@ -704,7 +618,6 @@ body {
     max-width: 950px;
     margin: 0 auto 70px auto;
     font-weight: 500;
-    margin-top: -140px;
 }
 
 .testimonial-grid {
@@ -736,7 +649,6 @@ body {
 }
 
 .testimonial-box p {
-    font-size: 20px;
     line-height: 1.8;
     margin-bottom: 35px;
     font-size: 15px;
@@ -806,10 +718,7 @@ body {
     padding: 60px 80px;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+
 
 .contact-wrapper {
     display: flex;
@@ -832,10 +741,6 @@ body {
     margin-bottom: 70px;
 }
 
-.contact-item {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
 
 .social-icons {
     display: flex;
@@ -888,33 +793,27 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 10px 15px;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .logo-img {
+        height: 50px;
+        margin-bottom: 10px;
     }
 
     .nav-links {
-        width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 8px;
-        padding: 0;
-        margin-top: 10px;
+        gap: 10px;
     }
 
-    .nav-links li {
-        list-style: none;
-    }
-
-    .nav-links li a {
-        padding: 6px 12px;
-        font-size: 12px;
-        border-radius: 20px;
-        white-space: nowrap;
+    body {
+        padding-top: 130px;
     }
 }
 
@@ -922,17 +821,15 @@ body {
 @media (max-width: 768px) {
 
     .services-grid {
-        display: grid !important;
-        grid-template-columns: 1fr !important;
-        grid-template-rows: auto !important;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .service-card {
         grid-column: 1 / -1 !important;
         grid-row: auto !important;
-        height: 280px !important;
+        height: 250px;
     }
-
 }
 
 
