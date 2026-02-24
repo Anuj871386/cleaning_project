@@ -18,18 +18,11 @@ body {
 
 /* ================= NAVBAR ================= */
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1200px;   /* Fixed width */
-    margin: 0 auto;
-    padding: 20px 40px;
     display: flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 15px 8%;
+    flex-wrap: wrap;   /* important */
 }
 
 .logo-img {
@@ -38,6 +31,18 @@ body {
 
 .nav-links {
     display: flex;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
 }
 
 .nav-links li {
@@ -62,23 +67,26 @@ body {
 
 /* ================= HERO ================= */
 .hero {
-    width: 1200px;
-    margin: 0 auto;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 100px 60px;
-    background:
-        linear-gradient(
-            to right,
-            rgba(255,255,255,0.97) 40%,
-            rgba(255,255,255,0.7) 55%,
-            rgba(255,255,255,0.2) 75%
-        ),
-        url("../images/cleaning8.png");
+    padding: 0 8%;
+    background: url("/static/core/images/cleaning8.png") no-repeat right center;
     background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        background-position: center;
+        padding: 100px 20px;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
 }
 
 .hero-content {
@@ -208,10 +216,27 @@ body {
     text-align: center;
 }
 
+
+
 .why-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    padding: 80px 8%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .why-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .why-container {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ================= TESTIMONIAL ================= */
