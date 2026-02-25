@@ -1,244 +1,153 @@
-/* ================= GLOBAL RESPONSIVE FIX ================= */
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%; /* Prevent font auto zoom on mobile */
+}
+
+body {
+    min-width: 1200px;   /* Force desktop width */
+    overflow-x: auto;    /* Allow horizontal scroll on mobile */
+}
 
 img {
-    max-width: 100%;
+    max-width: none;     /* Keep original desktop sizing */
     height: auto;
+    display: block;
 }
 
+/* ================= NAVBAR ================= */
 
-@media (max-width: 768px) {
-
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 15px 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;      /* allows wrapping */
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .nav-links li a {
-        font-size: 13px;
-        padding: 6px 12px;
-    }
-
-    .logo-img {
-        height: 45px;
-    }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
 }
 
-/* ================= HERO MOBILE FIX ================= */
-
-@media (max-width: 768px) {
-
-    .hero {
-        padding: 120px 20px 60px 20px;
-        background-position: center;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(26px, 5vw, 50px);
-        line-height: 1.4;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-        margin-bottom: 40px;
-    }
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
+.nav-links li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logo-img {
+    height: 60px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    padding: 180px 60px 100px 60px;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.3;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
 
 /* ================= FEATURE SECTION ================= */
 
-@media (max-width: 768px) {
-
-    .feature-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature-card {
-        width: 90%;
-        max-width: 400px;
-    }
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-
-/* ================= ABOUT SECTION FIX ================= */
-
-@media (max-width: 768px) {
-
-    .about-content h2 {
-        font-size: clamp(28px, 5vw, 56px);
-    }
-
-    .about-content h2::after {
-        width: 100%;
-    }
-
-    .about-text {
-        padding: 30px;
-        font-size: 16px;
-        line-height: 1.6;
-        border-radius: 20px;
-    }
-
-    .img1,
-    .img3,
-    .img4 {
-        height: auto;
-    }
+.feature-card {
+    width: 30%;
 }
 
+/* ================= ABOUT ================= */
 
-/* ================= SERVICES SECTION ================= */
-
-@media (max-width: 992px) {
-
-    .section-title1 {
-        font-size: clamp(28px, 6vw, 64px);
-        margin-bottom: 40px;
-    }
-
-    .services-section {
-        padding: 60px 20px;
-    }
+.about-content h2 {
+    font-size: 56px;
 }
 
+.about-text {
+    padding: 50px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section {
+    padding: 100px 60px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
 /* ================= WHY SECTION ================= */
 
-@media (max-width: 768px) {
-
-    .why-section {
-        padding: 60px 20px;
-    }
-
-    .section-title {
-        font-size: clamp(26px, 5vw, 48px);
-    }
-
-    .icon-box {
-        width: 140px;
-        height: 140px;
-    }
-
-    .icon-box img {
-        width: 70px;
-    }
+.why-section {
+    padding: 100px 60px;
 }
 
+.section-title {
+    font-size: 48px;
+}
+
+.icon-box {
+    width: 180px;
+    height: 180px;
+}
+
+.icon-box img {
+    width: 90px;
+}
 
 /* ================= GALLERY ================= */
 
-@media (max-width: 768px) {
-
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        justify-items: center;
-    }
-
-    .column {
-        width: 100%;
-        align-items: center;
-    }
-
-    .gallery-grid img {
-        width: 90%;
-        height: auto;
-    }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
-
 
 /* ================= TESTIMONIAL ================= */
 
-@media (max-width: 768px) {
-
-    .testimonial-section {
-        padding: 60px 20px;
-    }
-
-    .testimonial-box {
-        padding: 25px;
-    }
-
-    .profile h4 {
-        font-size: 18px;
-    }
+.testimonial-section {
+    padding: 100px 60px;
 }
 
-
-/* ================= CONTACT SECTION ================= */
-
-@media (max-width: 768px) {
-
-    .contact-box h1 {
-        font-size: clamp(28px, 6vw, 60px);
-    }
-
-    .contact-box p {
-        font-size: 16px;
-    }
-
-    .contact-text {
-        font-size: 16px;
-        margin-bottom: 30px;
-    }
-
-    .contact-item {
-        font-size: 16px;
-    }
-
-    .footer-bar {
-        font-size: 14px;
-    }
+.testimonial-box {
+    padding: 40px;
 }
 
+/* ================= CONTACT ================= */
 
-@media (max-width: 768px) {
-
-    .services-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .service-card {
-        grid-column: auto !important;
-        grid-row: auto !important;
-        height: 220px;
-    }
+.contact-box h1 {
+    font-size: 60px;
 }
 
-@media (max-width: 768px) {
-
-    .logo-img {
-        height: 45px;
-    }
-
-    .hero {
-        padding-top: 140px;
-    }
+.contact-box p,
+.contact-text,
+.contact-item {
+    font-size: 18px;
 }
 
-
-@media (max-width: 768px) {
-
-    /* Scale entire page */
-    html {
-        transform: scale(0.70);
-        transform-origin: top left;
-        width: 142.85%;   /* 100 / 0.70 */
-    }
-
-    body {
-        overflow-x: auto;
-    }
-
+.footer-bar {
+    font-size: 16px;
 }
