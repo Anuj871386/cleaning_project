@@ -1,81 +1,53 @@
-/* ================= GLOBAL ================= */
+/* ================= GLOBAL UI FIX ================= */
 
-* {
+/* This keeps the website at a fixed laptop width (1200px).
+   The phone will now treat the page like a desktop screen. */
+html, body {
+    min-width: 1200px; 
+    overflow-x: auto; /* Allows horizontal scrolling if the phone is narrow */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    -webkit-text-size-adjust: 100%; /* Prevent font auto zoom on mobile */
-}
-
-body {
-    min-width: 1200px;   /* Force desktop width */
-    overflow-x: auto;    /* Allow horizontal scroll on mobile */
+    -webkit-text-size-adjust: 100%; /* Stops mobile from auto-resizing text */
 }
 
 img {
-    max-width: none;     /* Keep original desktop sizing */
+    max-width: 100%;
     height: auto;
-    display: block;
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.logo-img {
-    height: 60px;
-}
-
-/* ================= HERO ================= */
+/* ================= HERO SECTION (FIXED) ================= */
 
 .hero {
-    padding: 180px 60px 100px 60px;
+    /* Desktop settings stay active everywhere */
+    padding: 160px 0; 
     background-position: center;
     background-size: cover;
 }
 
 .hero-content h1 {
-    font-size: 64px;
-    line-height: 1.3;
+    font-size: 50px; /* Fixed desktop size */
+    line-height: 1.2;
 }
 
 .hero-content p {
-    font-size: 18px;
-    margin-bottom: 50px;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
 
-/* ================= FEATURE SECTION ================= */
+/* ================= FEATURE SECTION (FIXED) ================= */
 
 .feature-container {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    flex-direction: row; /* Always horizontal, never stacks */
+    justify-content: center;
+    gap: 20px;
 }
 
 .feature-card {
-    width: 30%;
+    width: 350px; /* Fixed desktop width */
 }
 
-/* ================= ABOUT ================= */
+/* ================= ABOUT SECTION (FIXED) ================= */
 
 .about-content h2 {
     font-size: 56px;
@@ -87,27 +59,20 @@ img {
     line-height: 1.8;
 }
 
-/* ================= SERVICES ================= */
+/* ================= SERVICES & GALLERY (FIXED GRID) ================= */
 
-.services-section {
-    padding: 100px 60px;
-}
-
-.services-grid {
+.services-grid, .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* This keeps your laptop columns (e.g., 3 or 4 columns) */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
 }
 
-/* ================= WHY SECTION ================= */
-
-.why-section {
-    padding: 100px 60px;
+.service-card {
+    height: 300px; /* Original desktop height */
 }
 
-.section-title {
-    font-size: 48px;
-}
+/* ================= WHY SECTION (FIXED) ================= */
 
 .icon-box {
     width: 180px;
@@ -118,36 +83,12 @@ img {
     width: 90px;
 }
 
-/* ================= GALLERY ================= */
-
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-/* ================= TESTIMONIAL ================= */
-
-.testimonial-section {
-    padding: 100px 60px;
-}
-
-.testimonial-box {
-    padding: 40px;
-}
-
-/* ================= CONTACT ================= */
+/* ================= CONTACT & FOOTER (FIXED) ================= */
 
 .contact-box h1 {
     font-size: 60px;
 }
 
-.contact-box p,
-.contact-text,
 .contact-item {
     font-size: 18px;
-}
-
-.footer-bar {
-    font-size: 16px;
 }
