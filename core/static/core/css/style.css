@@ -5,6 +5,32 @@ img {
     height: auto;
 }
 
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;      /* allows wrapping */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-links li a {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+}
+
 /* ================= HERO MOBILE FIX ================= */
 
 @media (max-width: 768px) {
@@ -199,4 +225,20 @@ img {
     .hero {
         padding-top: 140px;
     }
+}
+
+
+@media (max-width: 768px) {
+
+    /* Scale entire page */
+    html {
+        transform: scale(0.70);
+        transform-origin: top left;
+        width: 142.85%;   /* 100 / 0.70 */
+    }
+
+    body {
+        overflow-x: auto;
+    }
+
 }
